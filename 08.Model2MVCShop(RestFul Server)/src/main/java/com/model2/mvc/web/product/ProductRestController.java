@@ -47,7 +47,7 @@ public class ProductRestController {
 	}
 	
 	@RequestMapping(value="json/listProduct", method = RequestMethod.GET)
-	public Map listProduct( @ModelAttribute("search") Search search, Model model
+	public Map<String, Object> listProduct( @ModelAttribute("search") Search search, Model model
 										,HttpServletRequest request) throws Exception {
 		
 		if(search.getCurrentPage() == 0) {
